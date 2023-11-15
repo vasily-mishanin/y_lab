@@ -1,0 +1,32 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.inputWrapper label {
+}
+
+.inputWrapper input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.pswIcon {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+}
+
+.error {
+  color: var(--color-warning);
+  font-size: small;
+  height: 1rem;
+  align-self: flex-end;
+}
+
+.invalid {
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+}
