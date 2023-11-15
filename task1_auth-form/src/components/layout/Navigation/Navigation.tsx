@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Navigation.module.css';
 
 function Navigation() {
@@ -6,10 +6,20 @@ function Navigation() {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <NavLink
+            style={({ isActive }) => ({ color: isActive ? '#c5e898' : '' })}
+            to='/'
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to='/signin'>SingIn</Link>
+          <NavLink
+            style={({ isActive }) => ({ color: isActive ? '#c5e898' : '' })}
+            to='/signin'
+          >
+            SingIn
+          </NavLink>
         </li>
       </ul>
     </nav>

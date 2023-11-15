@@ -1,13 +1,39 @@
 .form {
-  padding: 2rem;
-
+  max-width: 320px;
+  min-width: 300px;
+  padding: 1.25rem;
   border-radius: 0.5rem;
+  box-shadow: 5px 5px 50px var(--color-light), -5px -5px 50px var(--color-sea);
 
-  box-shadow: 5px 5px 80px #f3f3f3, -5px -5px 80px #0766ad;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  color-scheme: light dark;
+  color: var(--color-light);
+  background-color: var(--color-dark);
 }
 
 .btnSubmit {
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
+  width: min-content;
+  align-self: center;
+  opacity: 0.75;
+  border-radius: 0.25rem;
+  background-color: var(--color-blue);
+  transition: opacity 0.2s;
+}
+
+.btnSubmit:enabled:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: light) {
+  .form {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+  }
 }

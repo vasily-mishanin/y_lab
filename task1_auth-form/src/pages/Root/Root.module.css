@@ -1,15 +1,18 @@
 .header {
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
+  box-shadow: 0 2px 6px -3px var(--color-sea);
 }
 
 .main {
   flex-shrink: 0;
   flex-grow: 1;
-
   display: flex;
 }
 
 .footer {
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 2px 0 6px -3px var(--color-sea);
 }

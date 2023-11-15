@@ -11,22 +11,34 @@
 .inputWrapper input {
   padding: 0.5rem;
   font-size: 1rem;
+  outline: none;
+  border-radius: 0.25rem;
+  border: 1px solid var(--color-blue);
 }
 
-.pswIcon {
+.inputWrapper input.invalid {
+  border-color: var(--color-warning);
+}
+
+.inputWrapper input:focus {
+  border-color: var(--color-green);
+}
+
+.passwordIcon {
+  cursor: pointer;
   position: absolute;
-  top: 2rem;
-  right: 0;
+  top: 2.25rem;
+  right: 0.5rem;
+  width: 1rem;
 }
 
-.error {
+.passwordIcon:hover {
+  scale: 1.1;
+}
+
+.errorMessage {
   color: var(--color-warning);
   font-size: small;
   height: 1rem;
   align-self: flex-end;
-}
-
-.invalid {
-  border-color: var(--color-warning);
-  color: var(--color-warning);
 }
