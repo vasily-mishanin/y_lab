@@ -41,14 +41,7 @@ function SignInForm() {
       console.log({ inputs });
       const enteredUser = { email: inputs.email, password: inputs.password };
       login(enteredUser);
-      // resetForm();
     }
-  };
-
-  const resetForm = () => {
-    setInputs(initialState);
-    setIsDirty(false);
-    setIsSubmitted(false);
   };
 
   return (

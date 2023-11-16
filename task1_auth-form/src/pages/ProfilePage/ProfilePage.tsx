@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import { useAuth } from '../../context/hooks/useAuth';
 import { AuthContext } from '../../context/authContext';
 
 function ProfilePage() {
