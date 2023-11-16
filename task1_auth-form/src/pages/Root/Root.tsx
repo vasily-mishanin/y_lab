@@ -15,6 +15,7 @@ function Root() {
       <main className={styles.main} id='main'>
         <Outlet />
       </main>
+
       <footer className={styles.footer}>Vasily Mishanin</footer>
     </>
   );
