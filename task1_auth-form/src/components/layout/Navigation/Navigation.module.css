@@ -7,8 +7,15 @@
   gap: 2rem;
 }
 
+.nav a {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .nav a.active {
-  color: var(--color-green);
+  color: var(--color-sea);
+  text-decoration: underline;
 }
 
 .signout {
@@ -22,4 +29,8 @@
 .signout:hover {
   cursor: pointer;
   background-color: var(--color-warning);
+}
+
+.navicon {
+  width: 1rem;
 }

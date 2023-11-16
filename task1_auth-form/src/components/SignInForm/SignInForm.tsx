@@ -16,7 +16,7 @@ const initialState = {
 
 function SignInForm() {
   const [inputs, setInputs] = useState<Inputs>(initialState);
-  const { login } = useAuth();
+  const { login, error, loading } = useAuth();
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
@@ -41,7 +41,7 @@ function SignInForm() {
       console.log({ inputs });
       const enteredUser = { email: inputs.email, password: inputs.password };
       login(enteredUser);
-      resetForm();
+      // resetForm();
     }
   };
 
@@ -54,6 +54,7 @@ function SignInForm() {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <div>
+        <p className={styles.authErrorMessage}>{error ? error : ''}</p>
         <Input
           name='email'
           label='Email'
@@ -80,7 +81,7 @@ function SignInForm() {
       </div>
 
       <button className={styles.btnSubmit} type='submit' disabled={isDisabled}>
-        Войти
+        {loading ? 'вход...' : 'Войти'}
       </button>
     </form>
   );

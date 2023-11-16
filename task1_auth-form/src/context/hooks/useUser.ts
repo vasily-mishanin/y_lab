@@ -10,7 +10,7 @@ export interface User {
 }
 
 export const useUser = () => {
-  const { user, setUser } = useContext(AuthContext);
+  const { user, error, loading, setUser } = useContext(AuthContext);
 
   const addUser = (user: User) => {
     if (user.password) {
@@ -25,5 +25,5 @@ export const useUser = () => {
     setUser(null);
   };
 
-  return { user, addUser, removeUser };
+  return { user, loading, error, addUser, removeUser };
 };

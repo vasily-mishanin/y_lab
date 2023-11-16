@@ -24,11 +24,21 @@
   border-radius: 0.25rem;
   background-color: var(--color-blue);
   transition: opacity 0.2s;
+  color: var(--color-light);
 }
-
+.btnSubmit:disabled {
+  color: var(--color-dark);
+}
 .btnSubmit:enabled:hover {
   cursor: pointer;
   opacity: 1;
+}
+
+.authErrorMessage {
+  color: var(--color-warning);
+  font-size: small;
+  height: 0.5rem;
+  align-self: flex-end;
 }
 
 @media (prefers-color-scheme: light) {

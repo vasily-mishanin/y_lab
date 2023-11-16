@@ -18,7 +18,7 @@
   --color-light: #f3f3f3;
   --color-dark: #213547;
   --color-sea: #29adb2;
-  --color-green: #c5e898;
+  --color-green: #d2de32;
   --color-blue: #0766ad;
   --color-warning: #fa7070;
 }
@@ -38,14 +38,15 @@ body {
 
 a:link {
   text-decoration: none;
+  color: inherit;
 }
 
 a:visited {
-  color: var(--color-light);
+  color: inherit;
 }
 
 a:hover {
-  color: var(--color-green);
+  color: var(--color-sea);
 }
 
 @media (prefers-color-scheme: light) {
@@ -55,7 +56,11 @@ a:hover {
   }
 
   a:visited {
-    color: var(--color-dark);
+    color: inherit;
+  }
+
+  a:hover {
+    color: var(--color-sea);
   }
 }
 

@@ -18,11 +18,8 @@
   gap: 0.5rem;
 }
 
-.usericon {
-  width: 1rem;
-}
-
 .main {
+  padding: 2rem;
   flex-shrink: 0;
   flex-grow: 1;
   display: flex;

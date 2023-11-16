@@ -1,5 +1,6 @@
 import { HttpResponse, http } from 'msw';
 import { User } from '../context/hooks/useUser';
+import { wait } from '../context/helpers';
 
 // This handler will intercept any rest request in your project.
 
@@ -29,6 +30,8 @@ export const handlers = [
   http.post('/login', async ({ request }) => {
     const body = (await request.json()) as LoginRequest;
     let existedUser: User | undefined;
+
+    await wait(2000);
 
     if (body.authToken) {
       existedUser = authenticatedUsers.find(
