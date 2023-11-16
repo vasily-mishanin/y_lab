@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Input from './Input';
 import styles from './SignInForm.module.css';
 import { validateEmail, validatePassword } from './helpers';
+import { useAuth } from '../../context/hooks/useAuth';
 
 type Inputs = {
   email: string;
@@ -15,6 +16,7 @@ const initialState = {
 
 function SignInForm() {
   const [inputs, setInputs] = useState<Inputs>(initialState);
+  const { login } = useAuth();
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
@@ -34,12 +36,16 @@ function SignInForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
+
     if (isFormValid) {
       console.log({ inputs });
+      const enteredUser = { email: inputs.email, password: inputs.password };
+      login(enteredUser);
+      resetForm();
     }
   };
 
-  const reset = () => {
+  const resetForm = () => {
     setInputs(initialState);
     setIsDirty(false);
     setIsSubmitted(false);
