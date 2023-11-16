@@ -2,7 +2,24 @@
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 0 2px 6px -3px var(--color-sea);
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.usericon {
+  width: 1rem;
 }
 
 .main {

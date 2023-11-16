@@ -8,7 +8,6 @@ export const useAuth = () => {
 
   useEffect(() => {
     const user = getItem('user');
-    console.log('localStorage', { user });
 
     if (user) {
       addUser(JSON.parse(user));

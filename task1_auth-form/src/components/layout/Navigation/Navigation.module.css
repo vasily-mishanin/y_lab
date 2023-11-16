@@ -3,9 +3,23 @@
 
 .nav ul {
   display: flex;
+  align-items: center;
   gap: 2rem;
 }
 
 .nav a.active {
   color: var(--color-green);
+}
+
+.signout {
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-sea);
+  color: var(--color-blue);
+  border-radius: 0.25rem;
+}
+
+.signout:hover {
+  cursor: pointer;
+  background-color: var(--color-warning);
 }

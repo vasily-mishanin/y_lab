@@ -1,26 +1,28 @@
 import { useContext } from 'react';
 import { AuthContext } from '../authContext';
-import { useLocalStorage } from './useLocalStorage';
+import { dummyHasher } from '../helpers';
 
 export interface User {
   id?: string;
   email: string;
+  password?: string;
   authToken?: string;
 }
 
 export const useUser = () => {
   const { user, setUser } = useContext(AuthContext);
-  const { setItem } = useLocalStorage();
 
-  const addUser = async (user: User) => {
-    console.log('addUser ', user);
-    await setUser(user);
-    setItem('user', JSON.stringify(user));
+  const addUser = (user: User) => {
+    if (user.password) {
+      const _user = { email: user.email, password: dummyHasher(user.password) };
+      setUser(_user);
+    } else {
+      setUser(user);
+    }
   };
 
   const removeUser = () => {
     setUser(null);
-    setItem('user', '');
   };
 
   return { user, addUser, removeUser };

@@ -18,18 +18,22 @@ function Navigation() {
             Home
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            style={({ isActive }) => ({ color: isActive ? '#c5e898' : '' })}
-            to='/signin'
-          >
-            SignIn
-          </NavLink>
-        </li>
+        {!user && (
+          <li>
+            <NavLink
+              style={({ isActive }) => ({ color: isActive ? '#c5e898' : '' })}
+              to='/signin'
+            >
+              SignIn
+            </NavLink>
+          </li>
+        )}
 
         {user && (
           <li>
-            <button onClick={logout}>Sign out</button>
+            <button className={styles.signout} onClick={logout}>
+              Sign out
+            </button>
           </li>
         )}
       </ul>

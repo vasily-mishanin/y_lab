@@ -25,6 +25,23 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
+import('./mocks/browser.ts')
+  .then(({ worker }) => {
+    // Start the worker.
+    worker.start();
+  })
+  .then(() => {
+    // Render the application.
+    root.render(
+      <React.StrictMode>
+        <AuthProvider>
+          <RouterProvider router={router} />
+        </AuthProvider>
+      </React.StrictMode>
+    );
+  });
+
+// IF THERE IS REAL API
 // if (import.meta.env.MODE === 'development') {
 //   // When development, setup the MSW.
 //   // import the worker (under the browser.ts file)
@@ -53,19 +70,3 @@ const root = ReactDOM.createRoot(
 //     </React.StrictMode>
 //   );
 // }
-
-import('./mocks/browser.ts')
-  .then(({ worker }) => {
-    // Start the worker.
-    worker.start();
-  })
-  .then(() => {
-    // Render the application.
-    root.render(
-      <React.StrictMode>
-        <AuthProvider>
-          <RouterProvider router={router} />
-        </AuthProvider>
-      </React.StrictMode>
-    );
-  });
