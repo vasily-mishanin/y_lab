@@ -1,9 +1,9 @@
 ### Task #1 from Y_Lab
 
-Deploy: https://y-lab.vercel.app/
+Deploy: https://y-lab.vercel.app/  
 Credentials:  
-alex@mail.com  
-qwe123!
+``alex@mail.com``  
+``qwe123!``
 
 #### Stack
 
