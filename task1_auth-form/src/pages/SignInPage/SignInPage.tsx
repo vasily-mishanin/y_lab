@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
 import SignInForm from '../../components/SignInForm/SignInForm';
-import { useAuth } from '../../context/hooks/useAuth';
 import styles from './SignInPage.module.css';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/authContext';
@@ -15,7 +14,7 @@ function SignInPage() {
 
   useEffect(() => {
     if (user) {
-      navigate('/');
+      navigate('/profile');
     } else {
       setLoading(false);
     }

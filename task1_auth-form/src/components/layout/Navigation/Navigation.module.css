@@ -21,7 +21,7 @@
 .signout {
   border: none;
   padding: 0.5rem 1rem;
-  background-color: var(--color-sea);
+  background-color: var(--color-light);
   color: var(--color-blue);
   border-radius: 0.25rem;
 }

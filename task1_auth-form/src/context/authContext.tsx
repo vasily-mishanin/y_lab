@@ -27,6 +27,8 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   const { setItem, removeItem } = useLocalStorage();
 
   const authenticateUser = async (user: User | null) => {
+    setError(null);
+
     if (user === null) {
       setUser(null);
       removeItem('user');

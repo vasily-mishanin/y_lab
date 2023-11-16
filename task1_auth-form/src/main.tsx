@@ -6,6 +6,7 @@ import Root from './pages/Root/Root.tsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage.tsx';
 import SignInPage from './pages/SignInPage/SignInPage.tsx';
 import { AuthProvider } from './context/authContext.tsx';
+import ProfilePage from './pages/ProfilePage/ProfilePage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
         path: 'signin/',
         element: <SignInPage />,
       },
-      { path: '/profile', element: <h1>User Profile</h1> },
+      { path: '/profile', element: <ProfilePage /> },
     ],
   },
 ]);

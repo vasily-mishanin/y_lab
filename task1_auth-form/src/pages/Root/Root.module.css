@@ -12,14 +12,8 @@
   align-items: center;
 }
 
-.user {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 .main {
-  padding: 2rem;
+  padding: 1rem;
   flex-shrink: 0;
   flex-grow: 1;
   display: flex;

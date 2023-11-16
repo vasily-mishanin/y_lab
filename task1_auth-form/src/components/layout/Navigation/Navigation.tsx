@@ -10,7 +10,6 @@ function Navigation() {
 
   const activeStyle = {
     color: '#29adb2',
-    textDecoration: 'underline',
   };
 
   return (
@@ -31,9 +30,7 @@ function Navigation() {
               style={({ isActive }) => (isActive ? activeStyle : {})}
               to='/profile'
             >
-              <div className={styles.user}>
-                <UserIcon className={styles.navicon} />
-              </div>
+              <UserIcon className={styles.navicon} />
             </NavLink>
           </li>
         )}
@@ -44,7 +41,7 @@ function Navigation() {
               style={({ isActive }) => (isActive ? activeStyle : {})}
               to='/signin'
             >
-              SignIn
+              Sign In
             </NavLink>
           </li>
         )}

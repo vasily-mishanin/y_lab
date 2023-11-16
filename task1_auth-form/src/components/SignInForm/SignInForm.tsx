@@ -54,7 +54,9 @@ function SignInForm() {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <div>
-        <p className={styles.authErrorMessage}>{error ? error : ''}</p>
+        <p className={styles.authErrorMessage}>
+          {isSubmitted && error ? error : ''}
+        </p>
         <Input
           name='email'
           label='Email'
