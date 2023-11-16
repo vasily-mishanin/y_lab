@@ -7,15 +7,15 @@ function Root() {
     <>
       <header className={styles.header}>
         <Link to='/'>
-          <span>LOGO</span>
+          <span>why LOGO</span>
         </Link>
-
         <Navigation />
       </header>
+
       <main className={styles.main} id='main'>
         <Outlet />
       </main>
-      <footer className={styles.footer}>Footer</footer>
+      <footer className={styles.footer}>Vasily Mishanin</footer>
     </>
   );
 }
